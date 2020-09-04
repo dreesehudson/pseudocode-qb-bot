@@ -2,19 +2,21 @@
 
 
 ### MoSCoW
-#### M:  
+#### Must Have:  
 - communicate the play to receivers
 - execute the play
 - qbBot make decision to pass or run based on defensive player positions
 - throw the ball
 
-#### S:  
+#### Should Have:  
 
-#### C:  running plays
+#### Could Have:  
+- running plays
 - additional receivers (running back and tight end or 4th wide receiver)
 - consideration for gaining first down, current iteration always just looks for open receiver
 
-#### W:  starting ball somewhere other than midpoint between the sidelines
+#### Won't Have:  
+- starting ball somewhere other than midpoint between the sidelines
 - account for additional defenders (safeties and linebackers)
 - ability to track first downs gained, i.e. 
 - team will not punt, will just play 4 downs to score irregardless of drive starting position.
@@ -39,7 +41,7 @@ SET down = 1
     rusher[A, B, C, D] = position{[null], [null], [null]}
 
 
-WHILE (down<=4 OR touchdown(false) ) {
+WHILE (down <= 4 OR touchdown(false) ) {
   
   <!-- receive play call from head coach, this tells the receivers where to be at t=0, t=1, t=2 etc.   -->
     huddleAt(lineOfScrimmage)
